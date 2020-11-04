@@ -30,6 +30,7 @@
 
         <!--中间件-->
         <kafka.version>2.5.7.RELEASE</kafka.version>
+        <redisson>3.13.6</redisson>
     </properties>
 
     <dependencies>
@@ -75,6 +76,12 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>${kafka.version}</version>
+        </dependency>
+        <!--============[redis相关]==================-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${redisson}</version>
         </dependency>
 
     </dependencies>
