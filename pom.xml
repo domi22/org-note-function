@@ -27,6 +27,9 @@
         <hikariCP>2.7.9</hikariCP>
         <fast.json>1.2.41</fast.json>
         <commons.lang3>3.8</commons.lang3>
+
+        <!--中间件-->
+        <kafka.version>2.5.7.RELEASE</kafka.version>
     </properties>
 
     <dependencies>
@@ -64,6 +67,14 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.connector}</version>
+        </dependency>
+
+        <!--中间件-开始-->
+        <!--kafka相关-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
 
     </dependencies>
