@@ -15,12 +15,12 @@ public class RedisClientConfig {
     @Bean
     public RedissonClient redisClient2() {
         Config config = new Config();
-        config(config);
-        clusterConfig(config);
+        setConfig(config);
+        setClusterServers(config);
         return Redisson.create(config);
     }
 
-    private void config(Config config) {
+    private void setConfig(Config config) {
         config.setCodec(null);
         config.setAddressResolverGroupFactory(null);
         config.setCleanUpKeysAmount(100);
@@ -41,7 +41,7 @@ public class RedisClientConfig {
         config.setUseScriptCache(false);
     }
 
-    private void clusterConfig(Config config) {
+    private void setClusterServers(Config config) {
         ClusterServersConfig clusterConfig = config.useClusterServers();
         clusterConfig.addNodeAddress("redis://127.0.0.1:7000", "redis://127.0.0.1:7001");
         clusterConfig.setMasterConnectionPoolSize(20);
