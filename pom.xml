@@ -71,12 +71,6 @@
         </dependency>
 
         <!--中间件-开始-->
-        <!--kafka相关-->
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>${kafka.version}</version>
-        </dependency>
         <!--============[redis相关]==================-->
         <dependency>
             <groupId>org.redisson</groupId>
