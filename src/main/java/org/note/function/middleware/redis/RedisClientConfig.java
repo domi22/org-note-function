@@ -4,8 +4,6 @@ import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.ClusterServersConfig;
 import org.redisson.config.Config;
-import org.redisson.config.ReadMode;
-import org.redisson.connection.balancer.RandomLoadBalancer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,6 +17,7 @@ public class RedisClientConfig {
         setClusterServers(config);
         return Redisson.create(config);
     }
+
 
     private void setConfig(Config config) {
 //        config.setCodec(null);
